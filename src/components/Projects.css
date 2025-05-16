@@ -1,0 +1,122 @@
+body{
+    margin: 0;
+    font-family:gugi;
+}
+#projects{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(3,9,19);
+    margin: 0;
+    color: white;
+    height: 100vmin;
+}
+
+#projectsheader{
+    display: flex;
+    height: 25%;
+    justify-content: right;
+}
+
+@font-face {
+    font-family: "gugi";
+    src: url("../fonts/Gugi-Regular.ttf");
+    font-style: normal;
+    font-weight: normal;
+}
+
+#projectsheader>h1{
+    font-size: 7vw;
+    margin: 0;
+}
+
+#project{
+    display: flex;
+    height: 75%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.1) 24%, rgba(255, 255, 255, 0.05) 73%, rgba(255, 255, 255, 0) 100%);
+}
+
+#projectflash{
+    width: 50%;
+}
+
+#projectshow{
+    width: 100%;
+    height: 80%;
+    background-image: url("../images/Vagabond.png");
+    background-size: cover;
+}
+
+#projecttitle{
+    display: flex;
+    height: 20%;
+    justify-content: center;
+    align-items: center;
+}
+
+#projecttitle>h1{
+    font-size: 3.5vw;
+    margin: 0;
+}
+
+#projectcontent{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#projectbuttons{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 40%;
+}
+
+#projectbuttons>button{
+    padding: 1.2vw 2vw;
+    font-size: 1.7vw;
+    background-color: rgba(208,223,251,0.9);
+    color: black;
+    border: none;
+    font-family: gugi;
+}
+
+#projectbuttons>button:hover{
+    transform: translate(1vw, 0.5vw);
+    cursor: pointer;
+    transition-duration: 0.1s;
+    color: white;
+    border: 3px solid rgb(100,100,145);
+    background-color: rgb(0,0,105);
+    box-shadow: -1vw -0.5vw 0.5vw lightblue;
+}
+
+#projectdesc{
+    padding: 2vw 1.5vw;
+    height: 60%;
+}
+
+#projectdesc>p{
+    font-size: 1.4vw;
+    font-weight: lighter;
+    text-align: center;
+}
+
+#scrolldiv3{
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.15) 24%, rgba(255, 255, 255, 0.08) 73%, rgba(255, 255, 255, 0) 100%);
+    height: 4.5em;
+}
+
+#scrolltoframe3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+#scrolltoframe3:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+    transition-duration: 0.3s;
+}
