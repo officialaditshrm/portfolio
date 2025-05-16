@@ -25,7 +25,7 @@ body{
 }
 
 #projectsheader>h1{
-    font-size: 7em;
+    font-size: 7vw;
     margin: 0;
 }
 
@@ -54,7 +54,7 @@ body{
 }
 
 #projecttitle>h1{
-    font-size: 3.5em;
+    font-size: 3.5vw;
     margin: 0;
 }
 
@@ -74,7 +74,7 @@ body{
 }
 
 #projectbuttons>button{
-    padding: 1.2em 2em;
+    padding: 1.2vw 2vw;
     font-size: 18px;
     background-color: rgba(208,223,251,0.9);
     color: black;
@@ -93,12 +93,12 @@ body{
 }
 
 #projectdesc{
-    padding: 2em 1.5em;
+    padding: 2vw 1.5vw;
     height: 60%;
 }
 
 #projectdesc>p{
-    font-size: 20px;
+    font-size: 1.4vw;
     font-weight: lighter;
     text-align: center;
 }
