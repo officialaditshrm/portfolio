@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@font-face {
+  font-family: "gruppo";
+  src: url("./fonts/Gruppo-Regular.ttf");
+  font-style: normal;
+  font-weight: lighter;
+}
+
+@font-face {
+    font-family: "gugi";
+    src: url("./fonts/Gugi-Regular.ttf");
+    font-style: normal;
+    font-weight: lighter;
+}
+
+* {
+    @apply transition-colors duration-1000;
+}

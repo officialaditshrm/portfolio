@@ -1,4 +1,4 @@
-body{
+/* body{
   margin: 0;
 }
 
@@ -12,6 +12,8 @@ body{
   flex-direction: column;
   border-bottom: 2px solid rgba(255,255,255, 0.5);
 }
+
+
 
 #mainframe1{
   display: flex;
@@ -153,4 +155,4 @@ body{
 #scrolltoframe2:hover{
   background-color: rgba(255,255,255,0.1);
   cursor: pointer;
-}
+} */
