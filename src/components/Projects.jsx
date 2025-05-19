@@ -16,16 +16,16 @@ function Projects({darkMode}){
 
     return (
         <div id = "projects" className = "font-gugi flex flex-col bg-sky-200 dark:bg-zinc-900 dark:text-white text-center">
-            <div id = "projectsheader" className = "flex items-center justify-end py-4 px-5 max-sm:justify-center">
+            <div id = "projectsheader" className = "flex flex-1 items-center justify-end py-4 px-5 max-sm:justify-center">
                 <h1 className = "text-[5vw] font-extrabold">PROJECTS</h1>
             </div>
-            <div id = "project" className = "flex max-sm:flex-col">
+            <div id = "project" className = "flex flex-1 max-sm:flex-col bg-gradient-to-t from-neutral-800/0 to-neutral-800/50">
                 <div id = "projectflash" className = "flex-1 flex flex-col">
                     <div id = "projectshow" className = "flex-1 flex justify-center items-center p-10 max-sm:p-3">
                         <img src = {project} className = "rounded-xl w-full h-full object-cover"/>
                     </div>
                     <div id = "projecttitle" className = "h-[15vh] flex justify-center items-center">
-                        <h1 className = "text-[3.6vw] font-bold">PROJECT - I</h1>
+                        <h1 className = "text-[3.6vw] font-bold">Project - I</h1>
                     </div>
                 </div>
                 <div id = "projectcontent" className = "flex-1 flex flex-col ">
@@ -33,7 +33,7 @@ function Projects({darkMode}){
                         <button className = "max-sm:py-3 max-sm:px-6 rounded-md hover:translate-x-[8px] hover:translate-y-[4px] dark:hover:shadow-[-8px_-4px_5px_0_rgba(255,255,255,0.3)] hover:shadow-[-8px_-4px_5px_0_rgba(0,0,0,0.3)] duration-300 py-5 px-10 bg-neutral-800 dark:bg-neutral-300">Github</button>
                         <button className = "max-sm:py-3 max-sm:px-6 rounded-md hover:translate-x-[8px] hover:translate-y-[4px] dark:hover:shadow-[-8px_-4px_5px_0_rgba(255,255,255,0.3)] hover:shadow-[-8px_-4px_5px_0_rgba(0,0,0,0.3)] duration-300 py-5 px-10 bg-neutral-800 dark:bg-neutral-300">Deployment</button>
                     </div>
-                    <div id = "projectdesc" className = "p-16 max-sm:p-8 font-gruppo text-[1.5vw] max-sm:text-[2.5vw]">
+                    <div id = "projectdesc" className = "p-10 max-sm:p-8 font-gruppo text-[1.5vw] max-sm:text-[3vw]">
                         <p>
                             This is going to contain some information about the project that is mentioned here.
                             We use some numerical values to highlight the achievements in this project.<br/>

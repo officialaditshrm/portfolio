@@ -15,6 +15,11 @@ function App() {
   const [darkMode, setDarkMode] = useState(false)
   const myRef = useRef()
   const [isVisible, setIsVisible] = useState(false)
+  const contactRef = useRef(null)
+
+  const scrollToContact = () => {
+    contactRef.current?.scrollIntoView({behavior : 'smooth'})
+  }
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -43,14 +48,14 @@ function App() {
 
   return (
     <div className = {darkMode && "dark"}>
-      <Header darkMode = {darkMode} setDarkMode = {setDarkMode} isVisible = {isVisible}/>
+      <Header darkMode = {darkMode} setDarkMode = {setDarkMode} isVisible = {isVisible} scrollToContact={scrollToContact}/>
       <div 
         id="frame1" 
         ref = {myRef}
-        className = "bg-sky-300 dark:bg-[url('./images/perks.jpg')] h-screen flex flex-col justify-center bg-cover">
+        className = "bg-sky-300 bg-[url('./images/perkslight.jpg')] dark:bg-[url('./images/perks.jpg')] h-screen flex flex-col justify-center bg-cover">
         <div id ="mainframe1" className="h-[85%] flex flex-col justify-end">
-          <motion.div id = "name" className = "sm:pl-5 h-max flex flex-col max-sm:items-center max-sm:h-full max-sm:justify-center w-full ">
-            <img src = {`${darkMode ? spcode : spcodeLight}`} className = "max-sm:w-[50%] w-[25%] h-[15%] object-cover dark:object-contain hover:translate-x-[8px] hover:translate-y-[4px] hover:cursor-pointer hover:shadow-[-8px_-4px_5px_0_rgba(0,0,0,0.5)] dark:hover:shadow-[-8px_-4px_5px_0_rgba(255,255,255,0.5)] dark:hover:bg-[rgba(0,0,0,0.2)] hover:bg-[rgba(255,255,255,0.2)] rounded-xl" onClick = {spClick} id= "spcode" alt= "blue jean" />
+          <motion.div id = "name" className = "sm:pl-5 h-max flex flex-col max-sm:items-center max-sm:h-full max-sm:justify-center w-full justify-end">
+            <img src = {`${darkMode ? spcode : spcodeLight}`} className = "max-sm:w-[50%] w-[25%] h-[20%] sm:dark:h-auto object-cover max-sm:dark:object-contain hover:translate-x-[8px] hover:translate-y-[4px] hover:cursor-pointer hover:shadow-[-8px_-4px_5px_0_rgba(0,0,0,0.5)] dark:hover:shadow-[-8px_-4px_5px_0_rgba(255,255,255,0.5)] dark:hover:bg-[rgba(0,0,0,0.2)] hover:bg-[rgba(255,255,255,0.2)] rounded-xl" onClick = {spClick} id= "spcode" alt= "blue jean" />
             <h1 className = "font-gruppo dark:text-white max-sm:text-[9vw] text-[7vw]">ADITYA SHARMA</h1>
           </motion.div>
         </div>
@@ -60,21 +65,21 @@ function App() {
           </button>
         </div>
       </div>
-      <div id="frame2" className = "flex flex-col dark:bg-[url('./images/frame2.jpg')] bg-white bg-cover font-gruppo dark:text-white">
+      <div id="frame2" className = "flex flex-col dark:bg-[url('./images/frame2.jpg')] bg-[url('./images/frame2light.jpg')] bg-white bg-cover font-gruppo dark:text-white">
         <div id = "frame2header" className = "h-[20vh] flex justify-center items-center">
-          <h2 className = "text-[5vw]">WELCOME TO MY WEB-PAGE!</h2>
+          <h2 className = "text-[5vw] font-bold">WELCOME TO MY WEB-PAGE!</h2>
         </div>
-        <div id ="mainframe2" className = "py-8 w-full flex max-sm:flex-col justify-center align-center">
-          <div id = "frame2flash" className = "rounded-xl w-full max-sm:h-full flex items-center justify-center border border-black dark:border-white">
+        <div id ="mainframe2" className = "p-8 w-full flex max-sm:flex-col justify-center align-center">
+          <div id = "frame2flash" className = "rounded-xl w-full backdrop-blur-md max-sm:h-full flex items-center justify-center border border-black dark:border-white">
             Slideshow
             <Slideshow darkMode = {darkMode}/>
           </div>
           <div id = "frame2content" className="w-full p-8 flex items-center justify-center">
-            <article className = "text-center rounded-xl bg-zinc-500/50 dark:bg-neutral-500/50 flex flex-col p-8 justify-evenly">
+            <article className = "text-center rounded-xl bg-neutral-200/70 dark:bg-neutral-700/70 backdrop-blur-md z-0 flex flex-col p-8 justify-evenly">
               <header id = "aboutheader">
-                <h2 className = "text-[5vw]">ABOUT</h2>
+                <h2 className = "text-[5vw] font-bold">ABOUT</h2>
               </header>
-              <div id = "aboutcontent" className = "max-sm:text-[2.5vw] text-[1.5vw]">
+              <div id = "aboutcontent" className = "max-sm:text-[3vw] text-[1.5vw]">
                 <p>
                   Mera naam Aditya  Sharma hai. Meri do taange hain.
                   Meri do aankhein hain jo mujhe majnu bhaiiya ne di thi.
@@ -93,7 +98,9 @@ function App() {
         </div>
       </div>
       {<Projects darkMode = {darkMode}/>}
-      {<Contact darkMode = {darkMode}/>}
+      <div ref = {contactRef}>
+        {<Contact darkMode = {darkMode}/>}
+      </div>
     </div>
   )
 }
