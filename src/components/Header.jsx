@@ -2,12 +2,32 @@
 import { useState, useEffect } from 'react'
 import moon from '../images/moon.png'
 import sun from '../images/sun.png'
-function Header({darkMode, setDarkMode, isVisible, scrollToContact}) {
+function Header({darkMode, setDarkMode, isVisible, scrollToContact, scrollToProjects, scrollToHome, scrollToAbout}) {
     const [menuOpen, setMenuOpen] = useState(false)
     const [shortMenu, setShortMenu] = useState(false)
 
     const toggleContact = () => {
         scrollToContact()
+        setMenuOpen(false)
+    }
+    
+    const toggleHome = () => {
+        scrollToHome()
+        setMenuOpen(false)
+    }
+
+    const toggleProjects = () => {
+        scrollToProjects()
+        setMenuOpen(false)
+    }
+    
+    const toggleAbout = () => {
+        scrollToAbout()
+        setMenuOpen(false)
+    }
+
+    const toggleGit = () => {
+        window.open('https://github.com/officialaditshrm', '_blank')
         setMenuOpen(false)
     }
 
@@ -36,10 +56,10 @@ function Header({darkMode, setDarkMode, isVisible, scrollToContact}) {
         <header id = "mainheader" className = {`${shortMenu ? 'block' : 'dark:bg-[rgba(0,0,0,0.5)] bg-[rgba(255,255,255,0.5)] fixed w-full flex h-[20vh] items-stretch justify-center font-gruppo'}`}>
             {!shortMenu &&
                 <div id = "buttons" className =  {`flex flex-1 dark:text-white text-[2.8vw] justify-evenly`}>
-                    <button className = "flex-1">Home</button>
-                    <button className = "flex-1">About</button>
-                    <button className = "flex-1">Projects</button>
-                    <button className = "flex-1">Contact</button>
+                    <button className = "flex-1 hover:bg-neutral-700/30 dark:hover:bg-neutral-200/30 hover:border-b-2 hover:border-neutral-700 dark:hover:border-neutral-200" onClick = {toggleGit}>GitHub</button>
+                    <button className = "flex-1 hover:bg-neutral-700/30 dark:hover:bg-neutral-200/30 hover:border-b-2 hover:border-neutral-700 dark:hover:border-neutral-200" onClick = {toggleAbout}>About</button>
+                    <button className = "flex-1 hover:bg-neutral-700/30 dark:hover:bg-neutral-200/30 hover:border-b-2 hover:border-neutral-700 dark:hover:border-neutral-200" onClick = {toggleProjects}>Projects</button>
+                    <button className = "flex-1 hover:bg-neutral-700/30 dark:hover:bg-neutral-200/30 hover:border-b-2 hover:border-neutral-700 dark:hover:border-neutral-200" onClick = {toggleContact}>Contact</button>
                 </div>
             }
             {shortMenu &&
@@ -56,9 +76,10 @@ function Header({darkMode, setDarkMode, isVisible, scrollToContact}) {
             }
             {shortMenu && menuOpen &&
                 <div id = "menu" className = {`font-gruppo fixed p-[1.7vw] z-40 dark:text-white gap-5 text-[1.5vw] flex flex-col rounded-2xl bg-white/70 backdrop-blur-md dark:bg-black/70 items-center justify-evenly w-[15vw] max-sm:justify-center max-sm:w-screen top-24 right-7 max-sm:right-0 max-sm:top-0 max-sm:rounded-none max-sm:h-screen max-sm:text-[4.5vw]`}>
-                    <button className = "max-sm:flex-none flex-1 hover:scale-125">HOME</button>
-                    <button className = "max-sm:flex-none flex-1 hover:scale-125">ABOUT</button>
-                    <button className = "max-sm:flex-none flex-1 hover:scale-125">PROJECTS</button>
+                    <button className = "max-sm:flex-none flex-1 hover:scale-125" onClick = {toggleHome}>HOME</button>
+                    <button className = "max-sm:flex-none flex-1 hover:scale-125" onClick = {toggleGit}>GITHUB</button>
+                    <button className = "max-sm:flex-none flex-1 hover:scale-125" onClick = {toggleAbout}>ABOUT</button>
+                    <button className = "max-sm:flex-none flex-1 hover:scale-125" onClick = {toggleProjects}>PROJECTS</button>
                     <button className = "max-sm:flex-none flex-1 hover:scale-125" onClick = {toggleContact}>CONTACT</button>
                 </div>
             }

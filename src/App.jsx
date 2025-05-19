@@ -13,20 +13,35 @@ function App() {
   const [scrollHover1, setScrollHover1] = useState(false)
   const [scrollHover2, setScrollHover2] = useState(false)
   const [darkMode, setDarkMode] = useState(false)
-  const myRef = useRef()
+  const homeRef = useRef()
   const [isVisible, setIsVisible] = useState(false)
+
   const contactRef = useRef(null)
+  const aboutRef = useRef(null)
+  const projectsRef = useRef(null)
 
   const scrollToContact = () => {
     contactRef.current?.scrollIntoView({behavior : 'smooth'})
   }
+  const scrollToAbout = () => {
+    aboutRef.current?.scrollIntoView({behavior : 'smooth'})
+  }
+  const scrollToProjects = () => {
+    projectsRef.current?.scrollIntoView({behavior : 'smooth'})
+  }
+  const scrollToHome = () => {
+    homeRef.current?.scrollIntoView({behavior : 'smooth'})
+  }
+
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       const entry = entries[0]
-      setIsVisible(entry.isIntersecting)
-    })
-    observer.observe(myRef.current)
+      setIsVisible(entry.intersectionRatio >= 0.1)
+    }, 
+    {threshold: 0.1})
+    observer.observe(homeRef.current)
+    return () => observer.disconnect()
   }, [])
 
   const onScrollHover1 = () => {
@@ -48,10 +63,17 @@ function App() {
 
   return (
     <div className = {darkMode && "dark"}>
-      <Header darkMode = {darkMode} setDarkMode = {setDarkMode} isVisible = {isVisible} scrollToContact={scrollToContact}/>
+      <Header 
+      darkMode = {darkMode} 
+      setDarkMode = {setDarkMode} 
+      isVisible = {isVisible} 
+      scrollToContact={scrollToContact} 
+      scrollToAbout={scrollToAbout}
+      scrollToProjects={scrollToProjects}
+      scrollToHome={scrollToHome}/>
       <div 
         id="frame1" 
-        ref = {myRef}
+        ref = {homeRef}
         className = "bg-sky-300 bg-[url('./images/perkslight.jpg')] dark:bg-[url('./images/perks.jpg')] h-screen flex flex-col justify-center bg-cover">
         <div id ="mainframe1" className="h-[85%] flex flex-col justify-end">
           <motion.div id = "name" className = "sm:pl-5 h-max flex flex-col max-sm:items-center max-sm:h-full max-sm:justify-center w-full justify-end">
@@ -65,7 +87,7 @@ function App() {
           </button>
         </div>
       </div>
-      <div id="frame2" className = "flex flex-col dark:bg-[url('./images/frame2.jpg')] bg-[url('./images/frame2light.jpg')] bg-white bg-cover font-gruppo dark:text-white">
+      <div id="frame2" ref = {aboutRef} className = "flex flex-col dark:bg-[url('./images/frame2.jpg')] bg-[url('./images/frame2light.jpg')] bg-white bg-cover font-gruppo dark:text-white">
         <div id = "frame2header" className = "h-[20vh] flex justify-center items-center">
           <h2 className = "text-[5vw] font-bold">WELCOME TO MY WEB-PAGE!</h2>
         </div>
@@ -97,7 +119,9 @@ function App() {
           </button>
         </div>
       </div>
-      {<Projects darkMode = {darkMode}/>}
+      <div ref = {projectsRef}>
+        {<Projects darkMode = {darkMode}/>}
+      </div>
       <div ref = {contactRef}>
         {<Contact darkMode = {darkMode}/>}
       </div>
