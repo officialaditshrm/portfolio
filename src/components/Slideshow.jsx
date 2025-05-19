@@ -1,7 +1,6 @@
 import React from "react"
-import './Slideshow.css'
 
-function Slideshow() {
+function Slideshow({darkMode}) {
     return (
         <>
         </>

@@ -17,6 +17,7 @@
     font-weight: lighter;
 }
 
+
 * {
-    @apply transition-colors duration-1000;
+    @apply transition duration-300;
 }
