@@ -37,9 +37,9 @@ function App() {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       const entry = entries[0]
-      setIsVisible(entry.intersectionRatio >= 0.1)
+      setIsVisible(entry.intersectionRatio >= 0.3)
     }, 
-    {threshold: 0.1})
+    {threshold: 0.3})
     observer.observe(homeRef.current)
     return () => observer.disconnect()
   }, [])
@@ -77,8 +77,8 @@ function App() {
         className = "bg-sky-300 bg-[url('./images/perkslight.jpg')] dark:bg-[url('./images/perks.jpg')] h-screen flex flex-col justify-center bg-cover">
         <div id ="mainframe1" className="h-[85%] flex flex-col justify-end">
           <motion.div id = "name" className = "sm:pl-5 h-max flex flex-col max-sm:items-center max-sm:h-full max-sm:justify-center w-full justify-end">
-            <img src = {`${darkMode ? spcode : spcodeLight}`} className = "max-sm:w-[50%] w-[25%] h-[20%] sm:dark:h-auto object-cover max-sm:dark:object-contain hover:translate-x-[8px] hover:translate-y-[4px] hover:cursor-pointer hover:shadow-[-8px_-4px_5px_0_rgba(0,0,0,0.5)] dark:hover:shadow-[-8px_-4px_5px_0_rgba(255,255,255,0.5)] dark:hover:bg-[rgba(0,0,0,0.2)] hover:bg-[rgba(255,255,255,0.2)] rounded-xl" onClick = {spClick} id= "spcode" alt= "blue jean" />
-            <h1 className = "font-gruppo dark:text-white max-sm:text-[9vw] text-[7vw]">ADITYA SHARMA</h1>
+            <img src = {`${darkMode ? spcode : spcodeLight}`} className = "max-sm:w-[50%] w-[25%] h-[20%] sm:dark:h-auto object-cover max-sm:dark:object-contain hover:translate-x-[8px] hover:translate-y-[4px] hover:cursor-pointer hover:shadow-[-8px_-4px_5px_0_rgba(0,0,0,0.5)] dark:hover:shadow-[-8px_-4px_5px_0_rgba(255,255,255,0.5)] dark:hover:bg-[rgba(30,30,30)] hover:bg-[rgba(235,235,235)] rounded-xl" onClick = {spClick} id= "spcode" alt= "blue jean" />
+            <h1 className = "font-gruppo dark:text-white max-sm:text-[9vw] text-[5vw]">ADITYA SHARMA</h1>
           </motion.div>
         </div>
         <div id = "scrolldiv1" className= "items-center h-[15vh] bg-gradient-to-b from-[rgba(0,0,0,0)] to-zinc-800 dark:to-neutral-500">
