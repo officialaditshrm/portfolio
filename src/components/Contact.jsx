@@ -4,6 +4,7 @@ import instagram from '../images/instagram.png'
 import instagramLight from '../images/instagramLight.png'
 import linkedin from '../images/linkedin.png'
 import linkedinLight from '../images/linkedinLight.png'
+import Footer from './Footer'
 
 function Contact({darkMode}) {
 
@@ -69,6 +70,7 @@ function Contact({darkMode}) {
                     </fieldset>
                 </div>
             </div>
+            <Footer/>
         </div>
     )
 }

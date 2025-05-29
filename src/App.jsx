@@ -62,7 +62,7 @@ function App() {
 
 
   return (
-    <div className = {darkMode && "dark"}>
+    <div className = {`${darkMode ? "dark bg-black":"bg-white"}`}>
       <Header 
       darkMode = {darkMode} 
       setDarkMode = {setDarkMode} 
