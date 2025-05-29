@@ -66,12 +66,12 @@ function Header({darkMode, setDarkMode, isVisible, scrollToContact, scrollToProj
                 <button
                 onClick = {toggleMenu}
                 id = "headerbutton"
-                className = {`${menuOpen && 'bg-transparent dark:shadow-none dark:bg-transparent shadow-none border-none'} z-50 fixed flex flex-col justify-evenly items-center right-3 top-3 border dark:border dark:border-white/10 shadow-[0px_0px_10px_2px_rgba(0,0,0,0.2)] dark:shadow-[0px_0px_5px_1px_rgba(255,255,255,0.1)] justify-between dark:bg-[rgba(30,30,30)] bg-[rgba(235,235,235)] max-sm:w-[12vw] max-sm:h-[12vw] w-[7vw] h-[7vw] rounded-md py-1.5 hover:scale-105 hover:cursor-pointer`}
+                className = {`${menuOpen && 'bg-transparent dark:shadow-none dark:bg-transparent shadow-none border-none'} z-50 fixed flex flex-col justify-evenly items-center right-3 top-3 border dark:border dark:border-white/10 shadow-[0px_0px_10px_2px_rgba(0,0,0,0.2)] dark:shadow-[0px_0px_5px_1px_rgba(255,255,255,0.1)] justify-between dark:bg-[rgba(30,30,30)] bg-[rgba(235,235,235)] w-[10vh] h-[10vh] rounded-md py-1.5 hover:scale-105 hover:cursor-pointer`}
                 >
-                    <div className = {`${menuOpen && 'bg-white/0 dark:bg-white/0'} w-[60%] max-sm:h-[1.2vw] h-[0.7vw] bg-black dark:bg-white rounded-md`}></div>
-                    <div className = {`${menuOpen && 'rotate-[45deg]'} absolute w-[60%] max-sm:h-[1.2vw] h-[0.7vw] bg-black dark:bg-white rounded-md`}></div>
-                    <div className = {`${menuOpen && 'rotate-[-45deg]'} w-[60%] max-sm:h-[1.2vw] h-[0.7vw] bg-black dark:bg-white rounded-md`}></div>
-                    <div className = {`${menuOpen && 'bg-white/0 dark:bg-white/0'} w-[60%] max-sm:h-[1.2vw] h-[0.7vw] bg-black dark:bg-white rounded-md`}></div>
+                    <div className = {`${menuOpen && 'bg-white/0 dark:bg-white/0'} w-[60%] max-sm:h-[1.05vh] h-[0.7vw] bg-black dark:bg-white rounded-md`}></div>
+                    <div className = {`${menuOpen && 'rotate-[45deg]'} absolute w-[60%] max-sm:h-[1.05vh] h-[0.7vw] bg-black dark:bg-white rounded-md`}></div>
+                    <div className = {`${menuOpen && 'rotate-[-45deg]'} w-[60%] max-sm:h-[1.05vh] h-[0.7vw] bg-black dark:bg-white rounded-md`}></div>
+                    <div className = {`${menuOpen && 'bg-white/0 dark:bg-white/0'} w-[60%] max-sm:h-[1.05vh] h-[0.7vw] bg-black dark:bg-white rounded-md`}></div>
                 </button>
             }
             {shortMenu && menuOpen &&
@@ -83,14 +83,14 @@ function Header({darkMode, setDarkMode, isVisible, scrollToContact, scrollToProj
                     <button className = "max-sm:flex-none flex-1 hover:scale-125" onClick = {toggleContact}>CONTACT</button>
                 </div>
             }
-            <div id= "darkmode" className = {`${shortMenu ? 'fixed bottom-5 right-5 max-sm:bottom-1 max-sm:right-1 dark:text-white flex z-30 justify-center items-center bg-white/0 rounded-full w-[9vw] h-[9vw] max-sm:w-[30vw] max-sm:h-[30vw]' : 'border-l-2 border-black/30 rounded-r-2xl dark:border-white/30 w-[15%] flex items-center justify-center'}`}>
+            <div id= "darkmode" className = {`${shortMenu ? 'fixed top-6 left-5 dark:text-white flex z-30 justify-center items-center bg-white/0 rounded-full' : 'border-l-2 border-black/30 rounded-r-2xl dark:border-white/30 w-[15%] flex items-center justify-center'}`}>
                 <button
                     id = "darkmodetoggle"
                     onClick = {toggleDark}
-                    className = {`${shortMenu && "shadow-[0_0_10px_2px_rgba(0,0,0,0.2)] dark:shadow-[0_0_10px_2px_rgba(255,255,255,0.2)]"} border max-sm:h-[9vw] max-sm:w-[15vw] dark:text-white bg-sky-200 dark:bg-sky-950 h-[3vw] w-[6vw] rounded-full border-black dark:border-white hover:scale-110 duration-300 flex items-center`}
+                    className = {`${shortMenu && "shadow-[0_0_10px_2px_rgba(0,0,0,0.2)] dark:shadow-[0_0_10px_2px_rgba(255,255,255,0.2)]"} border max-sm:h-[6vh] max-sm:w-[10vh] dark:text-white bg-sky-200 dark:bg-sky-950 h-[3vw] w-[6vw] rounded-full border-black dark:border-white hover:scale-110 duration-300 flex items-center`}
                     >
                     {
-                        <div className = {`h-[2.55vw] max-sm:h-[7.5vw] mx-[0.15vw] max-sm:mx-[0.6vw] border border-black flex items-center justify-center w-[2.55vw] max-sm:w-[7.5vw] rounded-full bg-white bg-contain bg-no-repeat bg-center dark:translate-x-[2.925vw] max-sm:dark:translate-x-[5.85vw] `}>
+                        <div className = {`h-[2.55vw] max-sm:h-[5vh] mx-[0.15vw] max-sm:mx-[0.4vh] border border-black flex items-center justify-center w-[2.55vw] max-sm:w-[5vh] rounded-full bg-white bg-contain bg-no-repeat bg-center dark:translate-x-[2.925vw] max-sm:dark:translate-x-[3.9vh] `}>
                             <img src = {`${darkMode ? moon : sun}`} className = " w-[80%]"/>
                         </div>}
                 </button>

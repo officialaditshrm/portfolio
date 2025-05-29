@@ -74,7 +74,7 @@ function App() {
       <div 
         id="frame1" 
         ref = {homeRef}
-        className = "bg-sky-300 bg-[url('./images/perkslight.jpg')] dark:bg-[url('./images/perks.jpg')] h-screen flex flex-col justify-center bg-cover">
+        className = "bg-[url('./images/perkslight.jpg')] dark:bg-[url('./images/perks.jpg')] h-screen flex flex-col justify-center bg-cover">
         <div id ="mainframe1" className="h-[85%] flex flex-col justify-end">
           <motion.div id = "name" className = "sm:pl-5 h-max flex flex-col max-sm:items-center max-sm:h-full max-sm:justify-center w-full justify-end">
             <img src = {`${darkMode ? spcode : spcodeLight}`} className = "max-sm:w-[50%] w-[25%] h-[20%] sm:dark:h-auto object-cover max-sm:dark:object-contain hover:translate-x-[8px] hover:translate-y-[4px] hover:cursor-pointer hover:shadow-[-8px_-4px_5px_0_rgba(0,0,0,0.5)] dark:hover:shadow-[-8px_-4px_5px_0_rgba(255,255,255,0.5)] dark:hover:bg-[rgba(30,30,30)] hover:bg-[rgba(235,235,235)] rounded-xl" onClick = {spClick} id= "spcode" alt= "blue jean" />
