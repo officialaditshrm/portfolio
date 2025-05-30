@@ -91,9 +91,9 @@ function App() {
         <div id = "frame2header" className = "h-[20vh] flex justify-center items-center">
           <h2 className = "text-[5vw] font-bold">WELCOME TO MY WEB-PAGE!</h2>
         </div>
-        <div id ="mainframe2" className = "p-8 w-full flex max-sm:flex-col justify-center align-center">
-          <div id = "frame2flash" className = "rounded-xl w-full backdrop-blur-md max-sm:h-full flex items-center justify-center border border-black dark:border-white">
-            Slideshow
+        <div id ="mainframe2" className = "p-8 w-full flex max-sm:flex-col justify-center items-center">
+          <div id = "frame2flash" className = "flex flex-col items-center rounded-xl sm:w-[50%] w-full backdrop-blur-md bg-white/30 dark:border-white">
+            <h1 className = "font-extrabold text-3xl my-4 ">Skill-Set:</h1>
             <Slideshow darkMode = {darkMode}/>
           </div>
           <div id = "frame2content" className="w-full p-8 flex items-center justify-center">
@@ -103,11 +103,8 @@ function App() {
               </header>
               <div id = "aboutcontent" className = "max-sm:text-[3vw] text-[1.5vw]">
                 <p>
-                  Mera naam Aditya  Sharma hai. Meri do taange hain.
-                  Meri do aankhein hain jo mujhe majnu bhaiiya ne di thi.
-                  Mere ko paisa chahiye.... dher saara paisa chahiye. job chahiye - hiranmayi <br></br><br></br>
-                  paisa do. paisa chahiye gta 6 se pehle 
-                  placement chahiye. music club. thenga
+                  I am a 4th-year B.Tech student in Computer Science with a specialization in Data Science at Vellore Institute of Technology, Vellore. Passionate about Web Development, I have hands-on experience with HTML, CSS, JavaScript, Django and React.js. I am also keenly interested in Machine Learning and have a solid grasp of its fundamentals.
+                  I am proficient in multiple programming languages, including Python, Java, and C++, and I continuously seek opportunities to expand my technical skill set.
                 </p>  
               </div>
             </article>
