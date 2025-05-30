@@ -92,7 +92,7 @@ function App() {
           <h2 className = "text-[5vw] font-bold">WELCOME TO MY WEB-PAGE!</h2>
         </div>
         <div id ="mainframe2" className = "p-8 w-full flex max-sm:flex-col justify-center items-center">
-          <div id = "frame2flash" className = "flex flex-col items-center rounded-xl sm:w-[50%] w-full backdrop-blur-md bg-white/30 dark:border-white">
+          <div id = "frame2flash" className = "flex flex-col items-center rounded-xl sm:w-[50%] w-full dark:border-white">
             <h1 className = "font-extrabold text-3xl my-4 ">Skill-Set:</h1>
             <Slideshow darkMode = {darkMode}/>
           </div>

@@ -6,24 +6,51 @@ import languages from "../images/languages.jpg"
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
+function PrevArrow(props) {
+    const { className, style, onClick } = props
+    return (
+        <button
+            className={`${className} !left-4 z-10`}
+            style={{ ...style, display: "block", borderRadius: "50%" }}
+            onClick={onClick}
+            aria-label="Previous"
+        />
+    )
+}
+
+function NextArrow(props) {
+    const { className, style, onClick } = props
+    return (
+        <button
+            className={`${className} !right-4 z-10`}
+            style={{ ...style, display: "block", borderRadius: "50%" }}
+            onClick={onClick}
+            aria-label="Next"
+        />
+    )
+}
+
 function Slideshow({darkMode}) {
-    
 
     const settings = {
         dots: true,
         infinite: true,
-        speed: 1000,
-        slidesToshow: 1,
-        slidesToScroll: 1
+        speed: 2000,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />,
     }
     return (
-            <Slider className = "size-full rounded-xl justify-center" {...settings} >
+            <Slider className = "size-full rounded-xl justify-center mb-20" {...settings} >
                 {skills.map((slide) => (
-                    <div className = "h-[50vh] rounded-b-xl">
+                    <div className = "h-[70vh] max-sm:h-[50vh] rounded-b-xl">
                         <div style = {{backgroundImage : `url(${slide.img})`}} className = {`bg-cover bg-no-repeat text-white rounded-b-xl border-black size-full `}>
                             <div className = "backdrop-blur-[1.5px] size-full flex flex-col justify-center items-center">
                                 <h1 className = "font-extrabold max-sm:text-3xl text-4xl">{slide.name}</h1>
-                                <div className = "w-full h-[60%] flex flex-col">
+                                <div className = "w-full h-[40%] max-sm:h-[60%] flex flex-col">
                                     <h2 className = "font-extrabold text-lg text-center flex-1">Tech Stack:</h2>
                                     <ol className ="text-center w-full h-[80%] flex flex-1 flex-col flex-wrap px-10">
                                         {slide.techstack.map((tech) => (
