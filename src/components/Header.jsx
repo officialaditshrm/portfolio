@@ -68,10 +68,10 @@ function Header({darkMode, setDarkMode, isVisible, scrollToContact, scrollToProj
                 id = "headerbutton"
                 className = {`${menuOpen && 'bg-transparent dark:shadow-none dark:bg-transparent shadow-none border-none'} z-50 fixed flex flex-col justify-evenly items-center right-3 top-3 border dark:border dark:border-white/10 shadow-[0px_0px_10px_2px_rgba(0,0,0,0.2)] dark:shadow-[0px_0px_5px_1px_rgba(255,255,255,0.1)] justify-between dark:bg-[rgba(30,30,30)] bg-[rgba(235,235,235)] w-[10vh] h-[10vh] rounded-md py-1.5 hover:scale-105 hover:cursor-pointer`}
                 >
-                    <div className = {`${menuOpen && 'bg-white/0 dark:bg-white/0'} w-[60%] max-sm:h-[1.05vh] h-[0.7vw] bg-black dark:bg-white rounded-md`}></div>
-                    <div className = {`${menuOpen && 'rotate-[45deg]'} absolute w-[60%] max-sm:h-[1.05vh] h-[0.7vw] bg-black dark:bg-white rounded-md`}></div>
-                    <div className = {`${menuOpen && 'rotate-[-45deg]'} w-[60%] max-sm:h-[1.05vh] h-[0.7vw] bg-black dark:bg-white rounded-md`}></div>
-                    <div className = {`${menuOpen && 'bg-white/0 dark:bg-white/0'} w-[60%] max-sm:h-[1.05vh] h-[0.7vw] bg-black dark:bg-white rounded-md`}></div>
+                    <div className = {`${menuOpen && 'bg-white/0 dark:bg-white/0'} w-[60%] h-[1.05vh] bg-black dark:bg-white rounded-md`}></div>
+                    <div className = {`${menuOpen && 'rotate-[45deg]'} absolute w-[60%] h-[1.05vh] bg-black dark:bg-white rounded-md`}></div>
+                    <div className = {`${menuOpen && 'rotate-[-45deg]'} w-[60%] h-[1.05vh] bg-black dark:bg-white rounded-md`}></div>
+                    <div className = {`${menuOpen && 'bg-white/0 dark:bg-white/0'} w-[60%] h-[1.05vh] bg-black dark:bg-white rounded-md`}></div>
                 </button>
             }
             {shortMenu && menuOpen &&

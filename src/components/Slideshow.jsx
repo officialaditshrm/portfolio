@@ -22,7 +22,7 @@ function Slideshow({darkMode}) {
                     <div className = "h-[50vh] rounded-b-xl">
                         <div style = {{backgroundImage : `url(${slide.img})`}} className = {`bg-cover bg-no-repeat text-white rounded-b-xl border-black size-full `}>
                             <div className = "backdrop-blur-[1.5px] size-full flex flex-col justify-center items-center">
-                                <h1 className = "font-extrabold text-4xl">{slide.name}</h1>
+                                <h1 className = "font-extrabold max-sm:text-3xl text-4xl">{slide.name}</h1>
                                 <div className = "w-full h-[60%] flex flex-col">
                                     <h2 className = "font-extrabold text-lg text-center flex-1">Tech Stack:</h2>
                                     <ol className ="text-center w-full h-[80%] flex flex-1 flex-col flex-wrap px-10">
