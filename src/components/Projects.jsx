@@ -40,11 +40,11 @@ function Projects({darkMode}){
                     <h1 className = "text-[5vw] font-extrabold">PROJECTS</h1>
                 </div>
                 <div className = "flex flex-1 max-sm:flex-col bg-gradient-to-t from-neutral-800/0 to-neutral-800/50">
-                    <div className = "flex-1 flex flex-col">
-                        <div className = "flex-1 flex justify-center items-center p-10 max-sm:p-3">
-                            <img src = {project} className = "rounded-xl w-full h-full object-cover"/>
+                    <div className = "flex-1 flex flex-col-reverse justify-center">
+                        <div className = "flex justify-center items-center px-10 max-sm:p-3 border border-black">
+                            <img src = {project} className = "rounded-xl w-full h-[50vh] object-contain"/>
                         </div>
-                        <div className = "h-[15vh] flex justify-center items-center">
+                        <div className = " flex justify-center items-center">
                             <h1 className = "text-[3.6vw] font-bold">Tic-Tac-Toe</h1>
                         </div>
                     </div>
@@ -55,20 +55,16 @@ function Projects({darkMode}){
                         </div>
                         <div className = "p-10 max-sm:p-8 font-gruppo text-[1.5vw] max-sm:text-[3vw]">
                             <p>
-                                A clean and interactive Tic-Tac-Toe game built with a focus on user-friendly design, responsive layout, and intuitive gameplay. The application allows two players to enter their names and play a classic 3x3 game, with real-time win detection and a visual highlight of the winning combination.<br/>
-
-Key Features:<br/>
-Player Name Input: Customize each game session by entering player names.<br/>
-
-Responsive Design: Fully functional across devices, ensuring a seamless experience on both desktop and mobile.<br/>
-
-Winning Highlight: The winning line is dynamically highlighted for better visual feedback.<br/>
-
-Game Logic: Built-in game logic to detect win, draw, and handle turn-based interaction.<br/>
-
-Dark/Light Mode Toggle: Includes a theme switcher for improved accessibility and user preference.<br/>
-
-Reset Functionality: Quick restart option to encourage replayability
+                                A clean and interactive Tic-Tac-Toe game built with a focus on user-friendly design, responsive layout, and intuitive gameplay. The application allows two players to enter their names and play a classic 3x3 game, with real-time win detection and a visual highlight of the winning combination.<br/><br/>
+                                <b>Key Features:</b>
+                                <ol className = "gap-4 flex-col flex">
+                                    <li>Player Name Input</li>
+                                    <li>Responsive Design</li>
+                                    <li>Winning Highlight</li>
+                                    <li>Game Logic</li>
+                                    <li>Dark/Light Mode Toggle</li>
+                                    <li>Reset Functionality</li>
+                                </ol>
                             </p>
                         </div>
                     </div>

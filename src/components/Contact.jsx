@@ -89,7 +89,7 @@ function Contact({darkMode}) {
                             onSubmit={handleSubmit}
                             className="flex flex-col gap-6 max-sm:gap-4 w-full"
                         >
-                            <div className="w-full flex flex-1 justify-center gap-3 items-center">
+                            <div className="w-full flex flex-1 sm:items-center  max-sm:flex-col gap-3">
                                 <label>Name:</label>
                                 <input
                                     name="name"
@@ -98,7 +98,7 @@ function Contact({darkMode}) {
                                     className="dark:bg-neutral-900/70 bg-neutral-200/70 max-sm:text-[3.6vw] max-sm:w-[48vw] w-[20vw] h-[7vh] p-2 text-[3vh] rounded-md border border-neutral-900 dark:border-neutral-500"
                                 />
                             </div>
-                            <div className="w-full flex flex-1 justify-center gap-3 items-center">
+                            <div className="w-full flex flex-1 sm:items-center  max-sm:flex-col gap-3">
                                 <label>Organization:</label>
                                 <input
                                     name="organization"
@@ -107,7 +107,7 @@ function Contact({darkMode}) {
                                     className="dark:bg-neutral-900/70 bg-neutral-200/70 max-sm:text-[3.6vw] max-sm:w-[48vw] w-[20vw] h-[7vh] p-2 text-[3vh] rounded-md border border-neutral-900 dark:border-neutral-500"
                                 />
                             </div>
-                            <div className="w-full flex flex-1 justify-center gap-3 items-center">
+                            <div className="w-full flex flex-1 sm:items-center max-sm:flex-col gap-3">
                                 <label>Email:</label>
                                 <input
                                     name="email"
@@ -116,12 +116,12 @@ function Contact({darkMode}) {
                                     className="dark:bg-neutral-900/70 bg-neutral-200/70 max-sm:text-[3.6vw] max-sm:w-[48vw] w-[20vw] h-[7vh] p-2 text-[3vh] rounded-md border border-neutral-900 dark:border-neutral-500"
                                 />
                             </div>
-                            <div className="w-full flex flex-col items-center justify-center">
+                            <div className="w-full flex-1 gap-3 flex flex-col">
                                 <label>Message:</label>
                                 <textarea
                                     name="message"
                                     required
-                                    className="p-2 bg-neutral-200/70 dark:bg-neutral-900/70 max-sm:text-[3.6vw] m-8 rounded-md border w-full border-neutral-900 dark:border-neutral-500 h-[20vh]"
+                                    className="p-2 bg-neutral-200/70 dark:bg-neutral-900/70 max-sm:text-[3.6vw] rounded-md border w-full border-neutral-900 dark:border-neutral-500 h-[20vh]"
                                 />
                             </div>
                             <div>
