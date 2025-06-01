@@ -92,8 +92,8 @@ function Projects({darkMode}){
                                     </ol>
                                 </div>
                                 <div className = "flex justify-evenly items-center text-white dark:text-black py-4 max-sm:py-2">
-                                    {project.git && <button onClick = {() => window.open(project.git, "_blank")} className = "max-sm:py-3 max-sm:px-6 rounded-md hover:translate-x-[8px] hover:translate-y-[4px] dark:hover:shadow-[-8px_-4px_5px_0_rgba(255,255,255,0.3)] hover:shadow-[-8px_-4px_5px_0_rgba(0,0,0,0.3)] duration-300 py-5 px-10 bg-neutral-800 dark:bg-neutral-300">Github</button>}
-                                    {project.deployed && <button onClick = {() => window.open(project.url, "_blank")} className = "max-sm:py-3 max-sm:px-6 rounded-md hover:translate-x-[8px] hover:translate-y-[4px] dark:hover:shadow-[-8px_-4px_5px_0_rgba(255,255,255,0.3)] hover:shadow-[-8px_-4px_5px_0_rgba(0,0,0,0.3)] duration-300 py-5 px-10 bg-neutral-800 dark:bg-neutral-300">Deployment</button>}
+                                    {project.isOnGit && <button onClick = {() => window.open(project.git, "_blank")} className = "max-sm:py-3 max-sm:px-6 rounded-md hover:translate-x-[8px] hover:translate-y-[4px] dark:hover:shadow-[-8px_-4px_5px_0_rgba(255,255,255,0.3)] hover:shadow-[-8px_-4px_5px_0_rgba(0,0,0,0.3)] duration-300 py-5 px-10 bg-neutral-800 dark:bg-neutral-300">Github</button>}
+                                    {project.isDeployed && <button onClick = {() => window.open(project.url, "_blank")} className = "max-sm:py-3 max-sm:px-6 rounded-md hover:translate-x-[8px] hover:translate-y-[4px] dark:hover:shadow-[-8px_-4px_5px_0_rgba(255,255,255,0.3)] hover:shadow-[-8px_-4px_5px_0_rgba(0,0,0,0.3)] duration-300 py-5 px-10 bg-neutral-800 dark:bg-neutral-300">Deployment</button>}
                                 </div>
                             </div>
                         </div>
@@ -126,8 +126,8 @@ const projectlist = [
                         "Mongo DB",
                         "Tailwind CSS"
                     ],
-        deployed: false,
-        git: false,
+        isDeployed: false,
+        isOnGit: false,
     },
     {
         name: "MDjiki",
@@ -142,8 +142,8 @@ const projectlist = [
                         "Tailwind CSS",
                         "JavaScript"
                     ],
-        deployed: false,
-        git: true,
+        isDeployed: false,
+        isOnGit: true,
     },
     {
         name: "Tic-Tac-Toe",
@@ -158,8 +158,8 @@ const projectlist = [
                         "JavaScript",
                         "CSS"
                     ],
-        deployed: true,
-        git: true,
+        isDeployed: true,
+        isOnGit: true,
     },
 ]
 
