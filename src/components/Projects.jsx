@@ -69,31 +69,29 @@ function Projects({darkMode}){
                 </div>
                 <Slider {...settings} adaptiveHeight = {true} className = "w-[90%] ... dark:bg-zinc-800 bg-zinc-100 shadow-[0_0_10px_1px_rgba(0,0,0,0.4)] rounded-2xl">
                     {projectlist.map((project) => (
-                        <div className = "dark:bg-zinc-800 bg-zinc-100 h-full p-10 rounded-2xl">
-                            <div className = "rounded-2xl flex h-[150vh] justify-evenly flex-col">
-                                <div className = " flex justify-center items-center">
-                                    <h1 className = "text-[3.6vw] font-bold">{project.name}</h1>
+                        <div className = "dark:bg-zinc-800 bg-zinc-100 h-full p-10 max-sm:py-5 rounded-2xl">
+                            <div className = "rounded-2xl flex h-[80vh] max-sm:h-[100vh] justify-evenly flex-col">
+                                <div className = "flex-1 flex justify-center items-center">
+                                    <h1 className = "text-3xl font-bold">{project.name}</h1>
                                 </div>
-                                <div className = "flex max-sm:flex-col max-sm:gap-20">
-                                    <div className = "flex flex-1 flex-col-reverse items-center justify-center">
-                                        <img src = {project.img} className = "shadow-[0_0_10px_1px_rgba(0,0,0,0.4)] rounded-2xl object-cover h-[40vh] object-contain"/>
-                                    </div>
-                                    <p className = "font-gruppo text-[1.5vw] max-sm:text-[3vw]">
+                                <div className = "flex-1 flex max-md:flex-col items-center max-md:pt-5 max-md:gap-10">
+                                    <img src = {project.img} className = "shadow-[0_0_10px_1px_rgba(0,0,0,0.4)] mx-10  rounded-2xl object-cover h-[40vh] max-sm:h-[20vh]"/>
+                                    <p className = "font-gruppo text-md max-sm:text-xs max-md:text-sm md:text-right">
                                         {project.description}<br/><br/>
                                     </p>
                                 </div>
-                                <div className = "font-gruppo mt-4 text-[1.5vw] max-sm:text-[3vw]">
+                                <div className = "flex-1 font-gruppo py-4 text-[1.5vw] flex flex-col justify-evenly max-sm:text-[3vw]">
                                     <b className = "text-2xl">Tech Stack:</b>
-                                    <ol className = "gap-4 flex flex-wrap justify-center">
+                                    <ul className = "gap-4 flex flex-wrap justify-center">
                                         {project.techstack.map((element) => (
                                             <li>{element}</li>
                                         ))
                                         }
-                                    </ol>
+                                    </ul>
                                 </div>
                                 <div className = "flex justify-evenly items-center text-white dark:text-black py-4 max-sm:py-2">
-                                    {project.isOnGit && <button onClick = {() => window.open(project.git, "_blank")} className = "max-sm:py-3 max-sm:px-6 rounded-md hover:translate-x-[8px] hover:translate-y-[4px] dark:hover:shadow-[-8px_-4px_5px_0_rgba(255,255,255,0.3)] hover:shadow-[-8px_-4px_5px_0_rgba(0,0,0,0.3)] duration-300 py-5 px-10 bg-neutral-800 dark:bg-neutral-300">Github</button>}
-                                    {project.isDeployed && <button onClick = {() => window.open(project.url, "_blank")} className = "max-sm:py-3 max-sm:px-6 rounded-md hover:translate-x-[8px] hover:translate-y-[4px] dark:hover:shadow-[-8px_-4px_5px_0_rgba(255,255,255,0.3)] hover:shadow-[-8px_-4px_5px_0_rgba(0,0,0,0.3)] duration-300 py-5 px-10 bg-neutral-800 dark:bg-neutral-300">Deployment</button>}
+                                    {project.isOnGit && <button onClick = {() => window.open(project.git, "_blank")} className = "max-sm:py-2 max-sm:px-3 max-sm:text-sm rounded-md hover:translate-x-[8px] hover:translate-y-[4px] dark:hover:shadow-[-8px_-4px_5px_0_rgba(255,255,255,0.3)] hover:shadow-[-8px_-4px_5px_0_rgba(0,0,0,0.3)] duration-300 py-5 px-10 bg-neutral-800 dark:bg-neutral-300">Github</button>}
+                                    {project.isDeployed && <button onClick = {() => window.open(project.url, "_blank")} className = "max-sm:py-2 max-sm:px-3 max-sm:text-sm rounded-md hover:translate-x-[8px] hover:translate-y-[4px] dark:hover:shadow-[-8px_-4px_5px_0_rgba(255,255,255,0.3)] hover:shadow-[-8px_-4px_5px_0_rgba(0,0,0,0.3)] duration-300 py-5 px-10 bg-neutral-800 dark:bg-neutral-300">Deployment</button>}
                                 </div>
                             </div>
                         </div>
@@ -114,22 +112,6 @@ import mconthego from "../images/mconthego.png"
 
 const projectlist = [
     {
-        name: "MC On The Go",
-        url: "",
-        git: "",
-        img: mconthego,
-        description: "A full-stack, responsive web platform for 200+ members of the VIT Music Club, enabling streamlined access to upcoming event details and band practice slot bookings. Implemented a secure login system and integrated a dynamic member database to store and retrieve performance and band-related information. Optimized backend task creation to achieve sub-1s response times, significantly improving user experience for over 50 prototype testers.",
-        techstack: [ "Node.js",
-                        "Express.js",
-                        "React.js",
-                        "Figma",
-                        "Mongo DB",
-                        "Tailwind CSS"
-                    ],
-        isDeployed: false,
-        isOnGit: false,
-    },
-    {
         name: "MDjiki",
         url: "",
         git: "https://github.com/officialaditshrm/mdjiki",
@@ -144,6 +126,22 @@ const projectlist = [
                     ],
         isDeployed: false,
         isOnGit: true,
+    },
+    {
+        name: "MC On The Go",
+        url: "",
+        git: "",
+        img: mconthego,
+        description: "A full-stack, responsive web platform for 200+ members of the VIT Music Club, enabling streamlined access to upcoming event details and band practice slot bookings. Implemented a secure login system and integrated a dynamic member database to store and retrieve performance and band-related information. Optimized backend task creation to achieve sub-1s response times, significantly improving user experience for over 50 prototype testers.",
+        techstack: [ "Node.js",
+                        "Express.js",
+                        "React.js",
+                        "Figma",
+                        "Mongo DB",
+                        "Tailwind CSS"
+                    ],
+        isDeployed: false,
+        isOnGit: false,
     },
     {
         name: "Tic-Tac-Toe",
