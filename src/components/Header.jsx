@@ -46,6 +46,7 @@ function Header({darkMode, setDarkMode, isVisible, scrollToContact, scrollToProj
 
     const toggleDark = () => {
         setDarkMode(!darkMode)
+        sessionStorage.setItem("darkmodevalue", !darkMode)
     }
 
     const toggleMenu = () => {
