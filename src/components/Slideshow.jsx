@@ -44,11 +44,11 @@ function Slideshow({darkMode}) {
         prevArrow: <PrevArrow />,
     }
     return (
-            <Slider className = "size-full rounded-xl justify-center mb-20" {...settings} >
+            <Slider className = "size-full justify-center mb-20" {...settings} >
                 {skills.map((slide) => (
-                    <div className = "h-[70vh] max-sm:h-[50vh] rounded-b-xl">
-                        <div style = {{backgroundImage : `url(${slide.img})`}} className = {`bg-cover bg-no-repeat text-white rounded-b-xl border-black size-full `}>
-                            <div className = "backdrop-blur-[1.5px] size-full flex flex-col justify-center items-center">
+                    <div className = "h-[70vh] max-sm:h-[50vh] rounded-t-xl">
+                        <div style = {{backgroundImage : `url(${slide.img})`}} className = {`bg-cover bg-no-repeat text-white rounded-t-xl border-black size-full `}>
+                            <div className = "backdrop-blur-[1.5px] rounded-t-xl size-full flex flex-col justify-center items-center">
                                 <h1 className = "font-extrabold max-sm:text-3xl text-4xl">{slide.name}</h1>
                                 <div className = "w-full h-[40%] max-sm:h-[60%] flex flex-col">
                                     <h2 className = "font-extrabold text-lg text-center flex-1">Tech Stack:</h2>

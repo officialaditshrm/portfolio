@@ -54,13 +54,13 @@ function Header({darkMode, setDarkMode, isVisible, scrollToContact, scrollToProj
     }
 
     return (
-        <header id = "mainheader" className = {`${shortMenu ? 'block' : 'dark:border dark:border-white/10 shadow-[0px_0px_10px_2px_rgba(0,0,0,0.2)] dark:shadow-[0px_0px_5px_1px_rgba(255,255,255,0.1)] justify-between dark:bg-[rgba(30,30,30)] rounded-2xl bg-[rgba(235,235,235)] fixed right-[5vw] left-[5vw] top-[2vw] flex h-[10vh] items-stretch font-gruppo'}`}>
+        <header id = "mainheader" className = {`${shortMenu ? 'block' : 'shadow-[0px_0px_10px_2px_rgba(0,0,0,0.2)] justify-between dark:bg-[rgba(30,30,30)] rounded-2xl bg-[rgba(235,235,235)] fixed right-[5vw] left-[5vw] top-[2vw] flex h-[10vh] items-stretch font-gruppo'}`}>
             {!shortMenu &&
                 <div id = "buttons" className =  {`flex dark:text-white text-[1.5vw] justify-evenly w-[40%]`}>
-                    <button className = "flex-1 rounded-l-2xl hover:bg-neutral-700/10 dark:hover:bg-neutral-200/10 hover:border-b hover:border-neutral-700 dark:hover:border-neutral-200" onClick = {toggleGit}>GitHub</button>
-                    <button className = "flex-1 hover:bg-neutral-700/10 dark:hover:bg-neutral-200/10 hover:border-b hover:border-neutral-700 dark:hover:border-neutral-200" onClick = {toggleAbout}>About</button>
-                    <button className = "flex-1 hover:bg-neutral-700/10 dark:hover:bg-neutral-200/10 hover:border-b hover:border-neutral-700 dark:hover:border-neutral-200" onClick = {toggleProjects}>Projects</button>
-                    <button className = "flex-1 hover:bg-neutral-700/10 dark:hover:bg-neutral-200/10 hover:border-b hover:border-neutral-700 dark:hover:border-neutral-200" onClick = {toggleContact}>Contact</button>
+                    <button className = "flex-1 rounded-l-2xl hover:font-extrabold hover:scale-90" onClick = {toggleGit}>GitHub</button>
+                    <button className = "flex-1 hover:font-extrabold hover:scale-90" onClick = {toggleAbout}>About</button>
+                    <button className = "flex-1 hover:font-extrabold hover:scale-90" onClick = {toggleProjects}>Projects</button>
+                    <button className = "flex-1 hover:font-extrabold hover:scale-90" onClick = {toggleContact}>Contact</button>
                 </div>
             }
             {shortMenu &&
@@ -84,7 +84,7 @@ function Header({darkMode, setDarkMode, isVisible, scrollToContact, scrollToProj
                     <button className = "max-sm:flex-none flex-1 hover:scale-125" onClick = {toggleContact}>CONTACT</button>
                 </div>
             }
-            <div id= "darkmode" className = {`${shortMenu ? 'fixed top-6 left-5 dark:text-white flex z-30 justify-center items-center bg-white/0 rounded-full' : 'border-l-2 border-black/30 rounded-r-2xl dark:border-white/30 w-[15%] flex items-center justify-center'}`}>
+            <div id= "darkmode" className = {`${shortMenu ? 'fixed sm:top-6 max-sm:bottom-6 left-5 dark:text-white flex z-30 justify-center items-center bg-white/0 rounded-full' : 'border-l-2 border-black/30 rounded-r-2xl dark:border-white/30 w-[15%] flex items-center justify-center'}`}>
                 <button
                     id = "darkmodetoggle"
                     onClick = {toggleDark}

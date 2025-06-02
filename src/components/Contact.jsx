@@ -59,7 +59,7 @@ function Contact({darkMode}) {
 
 
     return(
-        <div id = "Contact" className = "bg-amber-100 bg-[url('./images/contact.jpg')] dark:bg-[url('./images/contactdark.jpg')] bg-no-repeat bg-cover flex flex-col">
+        <div id = "Contact" className = " flex flex-col">
             <div id = "contactheader" className = "flex-1 flex justify-left max-sm:justify-center font-gugi dark:text-white font-extrabold items-center p-8">
                 <h1 className = "text-[5vw] max-sm:text-[7vw]">CONTACTme</h1>
             </div>
@@ -81,39 +81,39 @@ function Contact({darkMode}) {
                         <img src = {`${darkMode ? linkedin : linkedinLight}`}/>
                     </button>
                 </div>
-                <div id = "messageui" className = "font-gugi flex-1 flex-col px-3 items-center justify-center">
-                    <fieldset className = "border-2 px-10 py-5 border-black dark:border-amber-100 rounded-xl flex flex-col justify-center dark:text-white items-center">
-                        <legend className = "px-2 mr-2 text-[2.5vw] max-sm:text-[3.5vw] text-right">Drop a Message</legend>
+                <div id = "messageui" className = " font-gugi flex-1 flex-col px-10 items-center justify-center">
+                    <fieldset className = "dark:bg-neutral-800/70 bg-neutral-100/70 backdrop-blur-md px-10 py-5 rounded-xl flex flex-col justify-center dark:text-white shadow-[0_0_10px_0.5px_rgba(0,0,0,0.5)]">
+                        <h1 className = "text-[2.5vw] py-5 text-center max-sm:text-[3.5vw]">Drop a Message</h1>
                         <form
                             ref={formRef}
                             onSubmit={handleSubmit}
-                            className="flex flex-col gap-6 max-sm:gap-4 w-full"
+                            className="flex flex-col items-center gap-6 text-left max-sm:gap-4 w-full"
                         >
-                            <div className="w-full flex flex-1 sm:items-center  max-sm:flex-col gap-3">
+                            <div className="w-full flex flex-1 flex-col gap-3">
                                 <label>Name:</label>
                                 <input
                                     name="name"
                                     type="text"
                                     required
-                                    className="dark:bg-neutral-900/70 bg-neutral-200/70 max-sm:text-[3.6vw] max-sm:w-[48vw] w-[20vw] h-[7vh] p-2 text-[3vh] rounded-md border border-neutral-900 dark:border-neutral-500"
+                                    className="bg-neutral-900/70 dark:bg-neutral-200/70 max-sm:text-[3.6vw] w-3/4 h-[7vh] p-2 text-[3vh] rounded-md border-2 border-neutral-950 dark:border-neutral-500"
                                 />
                             </div>
-                            <div className="w-full flex flex-1 sm:items-center  max-sm:flex-col gap-3">
+                            <div className="w-full flex flex-1 flex-col gap-3">
                                 <label>Organization:</label>
                                 <input
                                     name="organization"
                                     type="text"
                                     required
-                                    className="dark:bg-neutral-900/70 bg-neutral-200/70 max-sm:text-[3.6vw] max-sm:w-[48vw] w-[20vw] h-[7vh] p-2 text-[3vh] rounded-md border border-neutral-900 dark:border-neutral-500"
+                                    className="bg-neutral-900/70 dark:bg-neutral-200/70 max-sm:text-[3.6vw] w-3/4 h-[7vh] p-2 text-[3vh] rounded-md border-2 border-neutral-900 dark:border-neutral-500"
                                 />
                             </div>
-                            <div className="w-full flex flex-1 sm:items-center max-sm:flex-col gap-3">
+                            <div className="w-full flex flex-1 flex-col gap-3">
                                 <label>Email:</label>
                                 <input
                                     name="email"
                                     type="text"
                                     required
-                                    className="dark:bg-neutral-900/70 bg-neutral-200/70 max-sm:text-[3.6vw] max-sm:w-[48vw] w-[20vw] h-[7vh] p-2 text-[3vh] rounded-md border border-neutral-900 dark:border-neutral-500"
+                                    className="bg-neutral-900/70 dark:bg-neutral-200/70 max-sm:text-[3.6vw] w-3/4 h-[7vh] p-2 text-[3vh] rounded-md border-2 border-neutral-900 dark:border-neutral-500"
                                 />
                             </div>
                             <div className="w-full flex-1 gap-3 flex flex-col">
@@ -121,7 +121,7 @@ function Contact({darkMode}) {
                                 <textarea
                                     name="message"
                                     required
-                                    className="p-2 bg-neutral-200/70 dark:bg-neutral-900/70 max-sm:text-[3.6vw] rounded-md border w-full border-neutral-900 dark:border-neutral-500 h-[20vh]"
+                                    className="p-2 dark:bg-neutral-200/70 bg-neutral-900/70 max-sm:text-[3.6vw] rounded-md border-2 border-neutral-900 dark:border-neutral-500 h-[20vh]"
                                 />
                             </div>
                             <div>

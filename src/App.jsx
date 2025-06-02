@@ -3,6 +3,7 @@ import Header from './components/Header.jsx'
 import spcode from './images/spcode.png'
 import Slideshow from './components/Slideshow.jsx'
 import scrollimage from './images/scroll.png'
+import scrolllight from './images/scrolllight.png'
 import Projects from './components/Projects.jsx'
 import Contact from './components/Contact.jsx'
 import { motion } from 'framer-motion'
@@ -10,7 +11,6 @@ import spcodeLight from './images/spcodeLight.png'
 
 
 function App() {
-  const [scrollHover1, setScrollHover1] = useState(false)
   const [scrollHover2, setScrollHover2] = useState(false)
   const [darkMode, setDarkMode] = useState(false)
   const homeRef = useRef()
@@ -48,10 +48,6 @@ function App() {
     setScrollHover1((prev) => !prev)
   }
 
-  const onScrollHover2 = () => {
-    setScrollHover2((prev) => !prev)
-  }
-
   const scrollToFrame = () => {
     window.scrollBy({top: 300, left: 0, behavior: 'smooth'})
   }
@@ -62,7 +58,7 @@ function App() {
 
 
   return (
-    <div className = {`${darkMode ? "dark bg-black":"bg-white"}`}>
+    <div className = {`${darkMode ? "dark bg-[url('./images/perks.jpg')]":"bg-[url('./images/perkslight.jpg')]"} bg-cover`}>
       <Header 
       darkMode = {darkMode} 
       setDarkMode = {setDarkMode} 
@@ -74,45 +70,44 @@ function App() {
       <div 
         id="frame1" 
         ref = {homeRef}
-        className = "bg-[url('./images/perkslight.jpg')] dark:bg-[url('./images/perks.jpg')] h-screen flex flex-col justify-center bg-cover">
+        className = "h-screen flex flex-col justify-center bg-gradient-to-b from-neutral-900/0 to-neutral-900/30">
         <div id ="mainframe1" className="h-[85%] flex flex-col justify-end">
-          <motion.div id = "name" className = "sm:pl-5 h-max flex flex-col max-sm:items-center max-sm:h-full max-sm:justify-center w-full justify-end">
+          <div id = "name" className = "sm:pl-5 h-max flex flex-col max-sm:items-center max-sm:h-full max-sm:justify-center w-full justify-end">
             <img src = {`${darkMode ? spcode : spcodeLight}`} className = "max-sm:w-[50%] w-[25%] h-[20%] sm:dark:h-auto object-cover max-sm:dark:object-contain hover:translate-x-[8px] hover:translate-y-[4px] hover:cursor-pointer hover:shadow-[-8px_-4px_5px_0_rgba(0,0,0,0.5)] dark:hover:shadow-[-8px_-4px_5px_0_rgba(255,255,255,0.5)] dark:hover:bg-[rgba(30,30,30)] hover:bg-[rgba(235,235,235)] rounded-xl" onClick = {spClick} id= "spcode" alt= "blue jean" />
             <h1 className = "font-gruppo dark:text-white max-sm:text-[9vw] text-[5vw]">ADITYA SHARMA</h1>
-          </motion.div>
+          </div>
         </div>
-        <div id = "scrolldiv1" className= "items-center h-[15vh] bg-gradient-to-b from-[rgba(0,0,0,0)] to-zinc-800 dark:to-neutral-500">
-          <button  className = "w-full h-full duration-300 hover:bg-[rgba(0,0,0,0.1)] dark:hover:bg-[rgba(255,255,255,0.1)] flex justify-center items-center" onClick = {scrollToFrame} onMouseEnter = {onScrollHover1} onMouseLeave={onScrollHover1} id = "scrolltoframe1">
-            {scrollHover1 && <img className = "h-[50%]" src = {scrollimage}/>}
+        <div id = "scrolldiv1" className= "h-[15vh] flex justify-center">
+          <button  className = "w-1/4 w-1/4 h-full h-full rounded-xl duration-300  flex justify-center items-center hover:translate-x-[8px] hover:translate-y-[-4px] hover:cursor-pointer hover:shadow-[-8px_4px_5px_0_rgba(0,0,0,0.5)] dark:hover:shadow-[-8px_4px_5px_0_rgba(255,255,255,0.5)] dark:hover:bg-[rgba(30,30,30)] hover:bg-[rgba(235,235,235)]" onClick = {scrollToFrame} onMouseEnter = {onScrollHover1} onMouseLeave={onScrollHover1} id = "scrolltoframe1">
+            <img className = "h-[50%]" src = {darkMode ? scrollimage : scrolllight}/>
           </button>
         </div>
       </div>
-      <div id="frame2" ref = {aboutRef} className = "flex flex-col dark:bg-[url('./images/frame2.jpg')] bg-[url('./images/frame2light.jpg')] bg-white bg-cover font-gruppo dark:text-white">
-        <div id = "frame2header" className = "h-[20vh] flex justify-center items-center">
-          <h2 className = "text-[5vw] font-bold">WELCOME TO MY WEB-PAGE!</h2>
+      <div id="frame2" ref = {aboutRef} className = "flex flex-col font-gruppo dark:text-white bg-gradient-to-t from-neutral-900/0 to-neutral-900/30">
+        <div id = "frame2header" className = "flex justify-center items-center">
+          <h2 className = "text-[5vw] w-[80%] text-center font-gugi h-full border-2 border-x-black/0 border-b-black/0 dark:border-t-white pt-5 border-t-black font-bold">WELCOME TO MY WEB-PAGE!</h2>
         </div>
-        <div id ="mainframe2" className = "p-8 w-full flex max-sm:flex-col justify-center items-center">
-          <div id = "frame2flash" className = "flex flex-col items-center rounded-xl sm:w-[50%] w-full dark:border-white">
-            <h1 className = "font-extrabold text-3xl my-4 ">Skill-Set:</h1>
+        <div id ="mainframe2" className = "p-8 w-full flex flex-row-reverse max-sm:flex-col-reverse justify-center items-center">
+          <div id = "frame2flash" className = "flex flex-col items-center rounded-xl sm:w-[50%] w-full dark:bg-neutral-800 bg-neutral-100 backdrop-blur-md">
             <Slideshow darkMode = {darkMode}/>
           </div>
           <div id = "frame2content" className="w-full p-8 flex items-center justify-center">
-            <article className = "text-center rounded-xl bg-neutral-200/70 dark:bg-neutral-700/70 backdrop-blur-md z-0 flex flex-col p-8 justify-evenly">
+            <article className = "text-center hover:scale-105 rounded-xl bg-neutral-200/70 dark:bg-neutral-700/70 backdrop-blur-md z-0 flex flex-col p-8 justify-evenly">
               <header id = "aboutheader">
-                <h2 className = "text-[5vw] font-bold">ABOUT</h2>
+                <h2 className = "max-sm:text-[5vw] text-[3vw] font-bold">ABOUT</h2>
               </header>
               <div id = "aboutcontent" className = "max-sm:text-[3vw] text-[1.5vw]">
                 <p>
                   I am a 4th-year B.Tech student in Computer Science with a specialization in Data Science at Vellore Institute of Technology, Vellore. Passionate about Web Development, I have hands-on experience with HTML, CSS, JavaScript, Django and React.js. I am also keenly interested in Machine Learning and have a solid grasp of its fundamentals.
                   I am proficient in multiple programming languages, including Python, Java, and C++, and I continuously seek opportunities to expand my technical skill set.
-                </p>  
+                </p>
               </div>
             </article>
           </div>
         </div>
-        <div id = "scrolldiv2" className= "items-center h-[15vh] bg-gradient-to-b from-[rgba(0,0,0,0)] to-zinc-800 dark:to-neutral-500">
-          <button className = "w-full h-full duration-300 hover:bg-[rgba(0,0,0,0.1)] dark:hover:bg-[rgba(255,255,255,0.1)] flex justify-center items-center" onClick = {scrollToFrame} onMouseEnter = {onScrollHover2} onMouseLeave={onScrollHover2} id = "scrolltoframe2">
-            {scrollHover2 && <img className = "h-[50%]" src = {scrollimage}/>}
+        <div id = "scrolldiv1" className= "h-[15vh] flex justify-center">
+          <button  className = "w-1/4 h-full border-2 border-x-white/0 border-t-white/0 dark:border-b-white border-b-black dark:hover:border-b-white/0 hover:border-b-black/0 rounded-xl duration-300  flex justify-center items-center hover:translate-x-[8px] hover:translate-y-[-4px] hover:cursor-pointer hover:shadow-[-8px_4px_5px_0_rgba(0,0,0,0.5)] dark:hover:shadow-[-8px_4px_5px_0_rgba(255,255,255,0.5)] dark:hover:bg-[rgba(30,30,30)] hover:bg-[rgba(235,235,235)]" onClick = {scrollToFrame} onMouseEnter = {onScrollHover1} onMouseLeave={onScrollHover1} id = "scrolltoframe1">
+            <img className = "h-[50%]" src = {darkMode ? scrollimage : scrolllight}/>
           </button>
         </div>
       </div>

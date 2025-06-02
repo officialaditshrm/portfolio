@@ -60,17 +60,19 @@ function Projects({darkMode}){
         slidesToScroll: 1,
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
+        autoPlay: true,
+        autoPlaySpeed: 5000,
     }
 
     return (
-            <div className = "font-gugi flex flex-col bg-sky-200 dark:bg-zinc-900 dark:text-white flex flex-col items-center text-center">
+            <div className = "font-gugi flex flex-col dark:text-white flex flex-col items-center text-center">
                 <div className = "flex flex-1 items-center justify-end py-4 px-5 max-sm:justify-center">
                     <h1 className = "text-[5vw] font-extrabold">PROJECTS</h1>
                 </div>
-                <Slider {...settings} adaptiveHeight = {true} className = "w-[90%] ... dark:bg-zinc-800 bg-zinc-100 shadow-[0_0_10px_1px_rgba(0,0,0,0.4)] rounded-2xl">
+                <Slider {...settings} adaptiveHeight = {true} className = "w-[90%] dark:bg-zinc-800 bg-zinc-100 shadow-[0_0_10px_1px_rgba(0,0,0,0.4)] rounded-2xl">
                     {projectlist.map((project) => (
-                        <div className = "dark:bg-zinc-800 bg-zinc-100 h-full p-10 max-sm:py-5 rounded-2xl">
-                            <div className = "rounded-2xl flex h-[80vh] max-sm:h-[100vh] justify-evenly flex-col">
+                        <div className = "dark:bg-zinc-800 bg-zinc-100 p-10 max-sm:py-5 rounded-2xl">
+                            <div className = "rounded-2xl flex justify-evenly flex-col">
                                 <div className = "flex-1 flex justify-center items-center">
                                     <h1 className = "text-3xl font-bold">{project.name}</h1>
                                 </div>
