@@ -70,7 +70,7 @@ function App() {
       <div 
         id="frame1" 
         ref = {homeRef}
-        className = "h-screen flex flex-col justify-center bg-gradient-to-b from-neutral-900/0 to-neutral-900/30">
+        className = "h-screen pb-5 flex flex-col justify-center bg-gradient-to-b from-neutral-900/0 to-neutral-900/30">
         <div id ="mainframe1" className="h-[85%] flex flex-col justify-end">
           <div id = "name" className = "sm:pl-5 h-max flex flex-col max-sm:items-center max-sm:h-full max-sm:justify-center w-full justify-end">
             <img src = {`${darkMode ? spcode : spcodeLight}`} className = "max-sm:w-[50%] w-[25%] h-[20%] sm:dark:h-auto object-cover max-sm:dark:object-contain hover:translate-x-[8px] hover:translate-y-[4px] hover:cursor-pointer hover:shadow-[-8px_-4px_5px_0_rgba(0,0,0,0.5)] dark:hover:shadow-[-8px_-4px_5px_0_rgba(255,255,255,0.5)] dark:hover:bg-[rgba(30,30,30)] hover:bg-[rgba(235,235,235)] rounded-xl" onClick = {spClick} id= "spcode" alt= "blue jean" />
@@ -83,7 +83,7 @@ function App() {
           </button>
         </div>
       </div>
-      <div id="frame2" ref = {aboutRef} className = "flex flex-col font-gruppo dark:text-white bg-gradient-to-t from-neutral-900/0 to-neutral-900/30">
+      <div id="frame2" ref = {aboutRef} className = "flex flex-col pt-5 font-gruppo dark:text-white bg-gradient-to-t from-neutral-900/0 to-neutral-900/30">
         <div id = "frame2header" className = "flex justify-center items-center">
           <h2 className = "text-[5vw] w-[80%] text-center font-gugi h-full border-2 border-x-black/0 border-b-black/0 dark:border-t-white pt-5 border-t-black font-bold">WELCOME TO MY WEB-PAGE!</h2>
         </div>
