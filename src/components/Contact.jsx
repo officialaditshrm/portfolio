@@ -17,7 +17,7 @@ function Contact({darkMode}) {
             window.open("https://twitter.com/aditshrm", "_blank")
         }
         if (id == "instagram"){
-            window.open("https://instagram.com/aditshrm", "_blank")
+            window.open("https://instagram.com/aditya.sharma.117", "_blank")
         }
         if (id == "linkedin"){
             window.open("https://linkedin.com/in/aditshrm", "_blank")
