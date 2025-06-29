@@ -109,7 +109,7 @@ function Projects({darkMode}){
 }
 
 import tictactoe from "../images/vagabond.png"
-import mdjiki from "../images/resolute.png"
+import mdjiki from "../images/Resolute.png"
 import mconthego from "../images/mconthego.png"
 import ccfd from '../images/ccfd.png'
 
