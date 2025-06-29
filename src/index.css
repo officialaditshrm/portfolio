@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: "gruppo";
+  src: url("./fonts/Gruppo-Regular.ttf");
+  font-style: normal;
+  font-weight: lighter;
+}
+
+@font-face {
+    font-family: "gugi";
+    src: url("./fonts/Gugi-Regular.ttf");
+    font-style: normal;
+    font-weight: lighter;
+}
+
+.dark .slick-dots li button:before {
+  font-size: 18px !important;
+  margin-top: 20px !important;
+  color: white !important;
+}
+
+.slick-dots li button:before {
+  font-size: 18px !important;
+  margin-top: 20px !important;
+  color: black !important;
+}
+
+* {
+    @apply transition duration-300;
+}
